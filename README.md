@@ -1,4 +1,4 @@
-# LLM-as-a-Judge Evaluation with LangSmith
+# TLDR
 
 This project demonstrates how to implement LLM-as-a-Judge evaluation on the LangSmith platform.
 
@@ -30,7 +30,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-3. Fill in `.env` value:
+3. Fill in `.env` values:
    - This is going to be specific to exactly what you are testing
    - peep the `.env.example` file for reference
    - Set `JUDGE_MODEL` to choose which LLM acts as the judge (for example `gpt-4o-mini` or `gpt-4.1-mini`)
@@ -42,21 +42,7 @@ pip install -r requirements.txt
 
 ## Run
 
-```bash
-python run_llm_as_a_judge.py --dataset-file data/ai_school_kb_3-12-2026.csv
-```
-
-Override the judge model for a single run:
-
-```bash
-python run_llm_as_a_judge.py --dataset-file data/ai_school_kb_3-12-2026.csv --judge-model gpt-4.1-mini
-```
-
-Use only selected evaluators for a run:
-
-```bash
-python run_llm_as_a_judge.py --evaluators exact_match,token_f1
-```
+See the `README.example_use_case.md` and `README.basic_concepts.md` files
 
 ## What it evaluates
 
