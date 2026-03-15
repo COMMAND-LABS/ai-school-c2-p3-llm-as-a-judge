@@ -44,36 +44,6 @@ pip install -r requirements.txt
 
 See the `README.example_use_case.md` and `README.basic_concepts.md` files
 
-### Helper scripts
-
-Upload a dataset to LangSmith only:
-
-```bash
-python upload_langsmith_dataset.py \
-  --dataset-file data/ai-school-kb-3-12-2026.csv \
-  --dataset-name kalygo-ai-school-kb-3-12-2026 \
-  --replace-existing
-```
-
-Upload a very simple custom evaluator demo to LangSmith:
-
-```bash
-python upload_simple_evaluator_demo.py \
-  --dataset-name simple-evaluator-demo-dataset \
-  --experiment-name simple-evaluator-demo \
-  --replace-existing
-```
-
-Upload an LLM-as-a-judge evaluator demo to LangSmith:
-
-```bash
-python upload_llm_judge_evaluator_demo.py \
-  --dataset-name llm-judge-evaluator-demo-dataset \
-  --experiment-name llm-judge-evaluator-demo \
-  --judge-model gpt-4o-mini \
-  --replace-existing
-```
-
 ## What it evaluates
 
 - Metric definitions live in `llm_judge/metrics.py` for easy review.
