@@ -14,17 +14,34 @@ Overview of how to use this project
 ## EXAMPLE
 
 ```sh - Experiment 1
-python evaluate_kalygo_agent.py \
-  --experiment-name "kalygo-asa-agent-with-openai-llm-gpt-4o-mini" \
+python run_llm_as_a_judge.py \
+  --experiment-name "asa-agent-with-gpt-4o-mini" \
+  --dataset-file "data/ai-school-kb-3-12-2026.csv" \
   --dataset-name "kalygo-ai-school-kb-3-12-2026" \
-  --max-examples 50 \
-  --timeout-seconds 90
+  --evaluators "llm_judge_score" \
+  --judge-model "gpt-4o-mini" \
+  --max-examples 20 \
+  --kalygo-api-timeout-seconds 90
 ```
 
 ```sh - Experiment 2
-python evaluate_kalygo_agent.py \
-  --experiment-name "kalygo-asa-agent-with-openai-llm-gpt-5.4" \
+python run_llm_as_a_judge.py \
+  --experiment-name "asa-agent-with-gpt-5.4" \
+  --dataset-file "data/ai-school-kb-3-12-2026.csv" \
   --dataset-name "kalygo-ai-school-kb-3-12-2026" \
-  --max-examples 50 \
-  --timeout-seconds 90
+  --evaluators "llm_judge_score" \
+  --judge-model "gpt-4o-mini" \
+  --max-examples 20 \
+  --kalygo-api-timeout-seconds 90
+```
+
+```sh - Experiment 2
+python run_llm_as_a_judge.py \
+  --experiment-name "asa-agent-with-opus-4.6" \
+  --dataset-file "data/ai-school-kb-3-12-2026.csv" \
+  --dataset-name "kalygo-ai-school-kb-3-12-2026" \
+  --evaluators "llm_judge_score" \
+  --judge-model "gpt-4o-mini" \
+  --max-examples 20 \
+  --kalygo-api-timeout-seconds 90
 ```
