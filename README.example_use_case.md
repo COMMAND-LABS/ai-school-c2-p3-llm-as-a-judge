@@ -16,8 +16,8 @@ Overview of how to use this project
 ```sh - Experiment 1
 python run_llm_as_a_judge.py \
   --experiment-name "asa-agent-with-gpt-4o-mini" \
-  --dataset-file "data/ai-school-kb-3-12-2026.csv" \
-  --dataset-name "kalygo-ai-school-kb-3-12-2026" \
+  --dataset-file "data/ai-school-kb-3-15-2026.csv" \
+  --dataset-name "ai-school-kb-3-15-2026" \
   --evaluators "llm_judge_score" \
   --judge-model "gpt-4o-mini" \
   --max-examples 10 \
@@ -28,8 +28,8 @@ python run_llm_as_a_judge.py \
 ```sh - Experiment 2
 python run_llm_as_a_judge.py \
   --experiment-name "asa-agent-with-gpt-5.4" \
-  --dataset-file "data/ai-school-kb-3-12-2026.csv" \
-  --dataset-name "kalygo-ai-school-kb-3-12-2026" \
+  --dataset-file "data/ai-school-kb-3-15-2026.csv" \
+  --dataset-name "ai-school-kb-3-15-2026" \
   --evaluators "llm_judge_score" \
   --judge-model "gpt-4o-mini" \
   --max-examples 20 \
@@ -40,8 +40,8 @@ python run_llm_as_a_judge.py \
 ```sh - Experiment 3
 python run_llm_as_a_judge.py \
   --experiment-name "asa-agent-with-opus-4.6" \
-  --dataset-file "data/ai-school-kb-3-12-2026.csv" \
-  --dataset-name "kalygo-ai-school-kb-3-12-2026" \
+  --dataset-file "data/ai-school-kb-3-15-2026.csv" \
+  --dataset-name "ai-school-kb-3-15-2026" \
   --evaluators "llm_judge_score" \
   --judge-model "gpt-4o-mini" \
   --max-examples 20 \
@@ -52,8 +52,8 @@ python run_llm_as_a_judge.py \
 ```sh - Experiment 4
 python run_llm_as_a_judge.py \
   --experiment-name "asa-agent-with-gemini-3.1-pro" \
-  --dataset-file "data/ai-school-kb-3-12-2026.csv" \
-  --dataset-name "kalygo-ai-school-kb-3-12-2026" \
+  --dataset-file "data/ai-school-kb-3-15-2026.csv" \
+  --dataset-name "ai-school-kb-3-15-2026" \
   --evaluators "llm_judge_score" \
   --judge-model "gpt-4o-mini" \
   --max-examples 20 \
