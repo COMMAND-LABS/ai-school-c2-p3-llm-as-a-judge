@@ -20,8 +20,9 @@ python run_llm_as_a_judge.py \
   --dataset-name "kalygo-ai-school-kb-3-12-2026" \
   --evaluators "llm_judge_score" \
   --judge-model "gpt-4o-mini" \
-  --max-examples 20 \
-  --kalygo-api-timeout-seconds 90
+  --max-examples 10 \
+  --kalygo-api-timeout-seconds 90 \
+  --agent-id 39
 ```
 
 ```sh - Experiment 2
@@ -32,10 +33,11 @@ python run_llm_as_a_judge.py \
   --evaluators "llm_judge_score" \
   --judge-model "gpt-4o-mini" \
   --max-examples 20 \
-  --kalygo-api-timeout-seconds 90
+  --kalygo-api-timeout-seconds 90 \
+  --agent-id 40
 ```
 
-```sh - Experiment 2
+```sh - Experiment 3
 python run_llm_as_a_judge.py \
   --experiment-name "asa-agent-with-opus-4.6" \
   --dataset-file "data/ai-school-kb-3-12-2026.csv" \
@@ -43,5 +45,18 @@ python run_llm_as_a_judge.py \
   --evaluators "llm_judge_score" \
   --judge-model "gpt-4o-mini" \
   --max-examples 20 \
-  --kalygo-api-timeout-seconds 90
+  --kalygo-api-timeout-seconds 90 \
+  --agent-id 37
+```
+
+```sh - Experiment 4
+python run_llm_as_a_judge.py \
+  --experiment-name "asa-agent-with-gemini-3.1-pro" \
+  --dataset-file "data/ai-school-kb-3-12-2026.csv" \
+  --dataset-name "kalygo-ai-school-kb-3-12-2026" \
+  --evaluators "llm_judge_score" \
+  --judge-model "gpt-4o-mini" \
+  --max-examples 20 \
+  --kalygo-api-timeout-seconds 90 \
+  --agent-id 35
 ```

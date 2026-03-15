@@ -38,6 +38,7 @@ pip install -r requirements.txt
    - Set `KALYGO_COMPLETION_API_URL` to the Kalygo API base (completion + agent config, e.g. `https://completion.kalygo.io`)
    - Set `KALYGO_API_KEY` for authenticated completion and agent-config calls
    - Set `KALYGO_API_TIMEOUT_SECONDS` for Kalygo completion request timeout
+   - Optional: set `KALYGO_API_RETRIES` for transient timeout/connection retries
 
 ## Run
 

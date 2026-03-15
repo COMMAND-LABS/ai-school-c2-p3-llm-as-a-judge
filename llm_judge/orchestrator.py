@@ -46,6 +46,7 @@ def _print_run_overview(
     print(f"Kalygo API key       : {_mask_secret(kalygo_api_key)}")
     print(f"Max examples         : {args.max_examples if args.max_examples is not None else 'all'}")
     print(f"Kalygo API timeout   : {args.kalygo_api_timeout_seconds}")
+    print(f"Kalygo API retries   : {args.kalygo_api_retries}")
     print(f"Judge model          : {args.judge_model}")
     print(f"Judge API base URL   : {judge_base_url}")
     print(f"Judge API key        : {_mask_secret(judge_api_key)}")
@@ -134,6 +135,7 @@ def main() -> None:
             session_id=session_id,
             prompt=question,
             kalygo_api_timeout_seconds=args.kalygo_api_timeout_seconds,
+            kalygo_api_retries=args.kalygo_api_retries,
         )
         return {"answer": answer}
 

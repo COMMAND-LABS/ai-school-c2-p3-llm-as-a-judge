@@ -20,7 +20,7 @@ def parse_args() -> argparse.Namespace:
             "Use --dataset-name for the LangSmith dataset identifier."
         ),
     )
-    parser.add_argument("--agent-id", default=os.getenv("KALYGO_AGENT_ID"), help="Kalygo agent ID")
+    parser.add_argument("--agent-id", default=None, help="Kalygo agent ID")
     parser.add_argument(
         "--kalygo-completion-api-url",
         "--api-url",
@@ -56,6 +56,13 @@ def parse_args() -> argparse.Namespace:
         type=int,
         default=int(os.getenv("KALYGO_API_TIMEOUT_SECONDS", os.getenv("KALYGO_TIMEOUT_SECONDS", "120"))),
         help="HTTP timeout for each Kalygo API completion request",
+    )
+    parser.add_argument(
+        "--kalygo-api-retries",
+        dest="kalygo_api_retries",
+        type=int,
+        default=int(os.getenv("KALYGO_API_RETRIES", "2")),
+        help="Number of retries for transient Kalygo streaming timeouts/connection errors",
     )
     parser.add_argument(
         "--judge-model",
